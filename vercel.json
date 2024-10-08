@@ -1,0 +1,6 @@
+{
+	"rewrites": [{
+		"scource": "/(.*)",
+		"destination": "index.html"
+	}]
+}

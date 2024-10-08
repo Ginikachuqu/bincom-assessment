@@ -1,0 +1,389 @@
+.container {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+
+  .hero {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2em;
+
+    @media screen and (max-width: 900px) {
+      width: 95%;
+    }
+
+    .image__container {
+      position: relative;
+      height: 45em;
+      width: 100%;
+      background-image: url("../assets/img/image1.jpg");
+      background-position: 70% 15%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 1.45em;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        background-position: 70% 20%;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 45em;
+        background-color: $color-gray;
+        margin: 0.35em 0.45em 0;
+        border-radius: 1.45em;
+        z-index: -1;
+      }
+    }
+
+    .my__info {
+      margin-top: 2.25em;
+
+      & > h2 {
+        font-family: $secondaryFont;
+        font-size: 12rem;
+        font-weight: 700;
+        text-align: center;
+
+        @media screen and (max-width: 900px) {
+          font-size: 10rem;
+        }
+
+        @media screen and (max-width: 500px) {
+          font-size: 7rem;
+        }
+      }
+
+      .name {
+        font-family: $primaryFont;
+        font-size: 2.25rem;
+        text-align: center;
+        margin: 3em 0 6em;
+
+        @media screen and (max-width: 900px) {
+          font-size: 2.15rem;
+          margin-bottom: 8rem;
+        }
+
+        @media screen and (max-width: 500px) {
+          font-size: 1.85rem;
+        }
+      }
+
+      .summary {
+        width: 100%;
+        @include setFlex(flex, center, center, column);
+
+        p {
+          font-family: $primaryFont;
+          font-size: 1.75rem;
+          width: 60%;
+          margin-bottom: 1.25em;
+          line-height: 1.75;
+
+          @media screen and (max-width: 900px) {
+            width: 80%;
+            font-size: 1.65rem;
+          }
+  
+          @media screen and (max-width: 500px) {
+            width: 100%;
+            font-size: 1.25rem;
+          }
+        }
+
+        .skill__section {
+          & > h2 {
+            font-family: $secondaryFont;
+            font-size: 12rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 1.25em 0 1em;
+
+            @media screen and (max-width: 900px) {
+              font-size: 10rem;
+            }
+    
+            @media screen and (max-width: 500px) {
+              font-size: 7rem;
+            }
+          }
+
+          .skill__list {
+            // text-align: center;
+
+            .soft__skills {
+              @include setFlex(flex, initial, initial, initial);
+              width: 100%;
+              margin-bottom: 5em;
+
+              @media screen and (max-width: 900px) {
+                @include setFlex(flex, initial, initial, column);
+                
+              }
+
+              &-title {
+                width: 50%;
+
+                @media screen and (max-width: 900px) {
+                  width: 100%;
+                }
+
+                h2 {
+                  font-family: $secondaryFont;
+                  font-size: 2.75rem;
+                }
+              }
+
+              &-list {
+                width: 50%;
+
+                @media screen and (max-width: 900px) {
+                  width: 100%;
+                }
+
+                ul {
+                  margin-top: 2em;
+
+                  li {
+                    list-style: none;
+                    font-size: 1.95rem;
+                    padding: 0.45em 0;
+                    border-bottom: 1px solid $dark-olive;
+                    cursor: pointer;
+                    transition: 0.3s ease-in;
+
+                    @media screen and (max-width: 500px) {
+                      font-size: 1.65rem;
+                    }
+
+                    &:hover {
+                      color: $dark-gray;
+                    }
+                  }
+                }
+              }
+            }
+
+            .tangible__skills {
+              @include setFlex(flex, initial, initial, initial);
+              width: 100%;
+              
+              @media screen and (max-width: 900px) {
+                @include setFlex(flex, initial, initial, column);
+                
+              }
+
+              &-title {
+                width: 50%;
+
+                @media screen and (max-width: 900px) {
+                  width: 100%;
+                }
+
+                h2 {
+                  font-family: $secondaryFont;
+                  font-size: 2.75rem;
+                }
+              }
+
+              &-list {
+                width: 50%;
+
+                @media screen and (max-width: 900px) {
+                  width: 100%;
+                }
+
+                ul {
+                  margin-top: 2em;
+
+                  li {
+                    list-style: none;
+                    font-size: 1.95rem;
+                    padding: 0.45em 0;
+                    border-bottom: 1px solid $dark-olive;
+                    cursor: pointer;
+                    transition: 0.3s ease-in;
+
+                    @media screen and (max-width: 500px) {
+                      font-size: 1.65rem;
+                    }
+
+                    &:hover {
+                      color: $dark-gray;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .gallery__section {
+          width: 100%;
+          margin-top: 20em;
+          margin-left: 5em;
+          @include setFlex(flex, initial, initial, initial);
+          flex-wrap: wrap;
+          gap: 20px;
+
+          @media screen and (max-width: 500px) {
+              margin-left: 2em;
+          }
+
+          .image {
+            width: 45%;
+            height: 25rem;
+            // background-color: #fff;
+            border-radius: 1.25rem;
+
+            &__1 {
+              background-image: url("../assets/img/image2.jpg");
+              background-position: 100% 18%;
+              background-size: cover;
+              background-repeat: no-repeat;
+
+              transition: 0.5s ease-in-out;
+              cursor: pointer;
+
+              &:hover {
+                background-position: 100% 25%;
+              }
+            }
+            &__2 {
+              background-image: url("../assets/img/image4.jpg");
+              background-position: 100% 18%;
+              background-size: cover;
+              background-repeat: no-repeat;
+              filter: grayscale(1);
+              transition: 0.5s ease-in-out;
+              cursor: pointer;
+
+              &:hover {
+                background-position: 70% 25%;
+              }
+            }
+            &__3 {
+              background-image: url("../assets/img/image3.jpg");
+              background-position: 100% 50%;
+              background-size: cover;
+              background-repeat: no-repeat;
+              transition: 0.5s ease-in-out;
+              cursor: pointer;
+
+              &:hover {
+                background-position: 70% 55%;
+              }
+            }
+            &__4 {
+              background-image: url("../assets/img/image5.jpg");
+              background-position: 100% 30%;
+              background-size: cover;
+              background-repeat: no-repeat;
+
+              transition: 0.5s ease-in-out;
+              cursor: pointer;
+
+              &:hover {
+                background-position: 70% 35%;
+              }
+            }
+          }
+        }
+
+        .work__history {
+          & > h2 {
+            font-family: $secondaryFont;
+            font-size: 12rem;
+            font-weight: 700;
+            text-align: center;
+            margin: 1.25em 0 1em;
+
+            @media screen and (max-width: 900px) {
+              font-size: 10rem;
+            }
+    
+            @media screen and (max-width: 500px) {
+              font-size: 7rem;
+            }
+          }
+
+          .history__list {
+            .item {
+              @include setFlex(flex, initial, initial, initial);
+              width: 100%;
+              margin-bottom: 10em;
+              
+              @media screen and (max-width: 900px) {
+                @include setFlex(flex, center, center, column);
+              }
+              
+              
+
+              &__title {
+                width: 50%;
+
+                @media screen and (max-width: 900px) {
+                  width: 100%;
+                  // text-align: center;
+                }
+
+                h2 {
+                  text-transform: uppercase;
+                  font-family: $secondaryFont;
+                  font-size: 2.75rem;
+                }
+
+                span {
+                  font-size: 1.25rem;
+                  color: $dark-olive;
+                }
+              }
+
+              &__list {
+                width: 50%;
+
+                @media screen and (max-width: 900px) {
+                  width: 100%;
+                  // text-align: center;
+                }
+
+                ul {
+                  margin-top: 2em;
+
+                  li {
+                    list-style: none;
+                    font-size: 1.95rem;
+                    padding: 0.45em 0;
+                    border-bottom: 1px solid $dark-olive;
+                    cursor: pointer;
+                    transition: 0.3s ease-in;
+
+                    @media screen and (max-width: 500px) {
+                      font-size: 1.65rem;
+                    }
+
+                    &:hover {
+                      color: $dark-gray;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+}
+}

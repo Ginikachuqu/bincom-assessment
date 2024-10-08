@@ -1,0 +1,11 @@
+@mixin setFlex ($displayValue, $align, $justify, $direction) {
+    display: $displayValue;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+@mixin setGrid {
+    display: grid;
+    grid-template-columns: 1fr repeat(12, minmax(min-content, 10rem)) 1fr;
+}
