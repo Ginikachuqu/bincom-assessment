@@ -1,3 +1,5 @@
+import { gsap } from 'gsap/all'
+
 const preloader = document.querySelector(".preloader");
 const loader = document.querySelector('.loading__rect-inner')
 
